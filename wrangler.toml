@@ -1,0 +1,10 @@
+name = "email-server"
+main = "src/index.ts"
+compatibility_date = "2022-11-12"
+
+[placement]
+mode = "smart"
+
+[vars]
+# The necessary secrets are:
+# - TOKEN
