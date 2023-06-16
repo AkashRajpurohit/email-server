@@ -1,6 +1,5 @@
 import { Context, MiddlewareHandler } from 'hono';
 import { Bindings } from './types';
-import emailSchema from './zod';
 
 export const authMiddleware = (): MiddlewareHandler => {
   return async (c: Context<{ Bindings: Bindings }>, next) => {
