@@ -24,15 +24,3 @@ export const authMiddleware = (): MiddlewareHandler => {
     await next();
   };
 };
-
-export const emailBodyValidator = (): MiddlewareHandler => {
-  return async (c: Context<{ Bindings: Bindings }>, next) => {
-    const content = await c.req.json();
-    const result = emailSchema.safeParse(content);
-    if (!result.success) {
-      return c.json({ success: false, issues: result.error.flatten() }, 400);
-    }
-
-    await next();
-  };
-};
