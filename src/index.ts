@@ -3,7 +3,7 @@ import { cors } from 'hono/cors';
 import { Bindings } from './types';
 import { authMiddleware } from './middleware';
 import { sendEmail } from './email';
-import emailSchema, { Email } from './zod';
+import emailSchema from './zod';
 
 const app = new Hono<{ Bindings: Bindings }>();
 
