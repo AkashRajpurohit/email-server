@@ -9,9 +9,6 @@
     "lint": "rome check ./src",
     "lint:fix": "rome check ./src --apply"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "hono": "^3.2.5",
     "zod": "^3.21.4"
