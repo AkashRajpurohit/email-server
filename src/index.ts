@@ -24,13 +24,12 @@ app.post('/send', authMiddleware(), async (c) => {
   }
 
   try {
-    await sendEmail(email);
+    const response = await sendEmail(email);
+    return c.json({ success: true, response }, 200);
   } catch (err) {
     console.log(err);
     return c.json({ success: false, message: err.message }, 400);
   }
-
-  return c.json({ success: true, message: 'Emails sent' }, 200);
 });
 
 app.notFound((c) => c.json({ ok: false, message: 'Not Found' }, 404));

@@ -12,4 +12,8 @@ export const sendEmail = async (email: Email) => {
     },
     body: JSON.stringify(mcEmail),
   });
+
+  const respText = await resp.text();
+
+  return resp.status + " " + resp.statusText + "\n\n" + respText;
 };
