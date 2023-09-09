@@ -15,13 +15,10 @@ export const sendEmail = async (email: Email) => {
 
   const respJson = await resp.json();
 
-  // check if email was sent successfully
-  if (resp.status > 299 || resp.status < 200) {
-    return {
-      success: false,
-      status: resp.status,
-      message: resp.statusText,
-      error: respJson
-    }
+  return {
+    success: resp.status < 299 || resp.status >= 200,
+    status: resp.status,
+    message: resp.statusText,
+    body: respJson
   }
 };
