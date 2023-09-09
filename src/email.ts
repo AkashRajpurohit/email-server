@@ -13,7 +13,15 @@ export const sendEmail = async (email: Email) => {
     body: JSON.stringify(mcEmail),
   });
 
-  const respText = await resp.text();
+  const respJson = await resp.json();
 
-  return resp.status + " " + resp.statusText + "\n\n" + respText;
+  // check if email was sent successfully
+  if (resp.status > 299 || resp.status < 200) {
+    return {
+      success: false,
+      status: resp.status,
+      message: resp.statusText,
+      error: respJson
+    }
+  }
 };
