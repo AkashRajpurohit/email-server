@@ -1,12 +1,17 @@
-import { MCContact, MCContent, MCEmail, MCPersonalization } from './types';
+import { MCContact, MCContent, MCEmail, MCPersonalization, Bindings } from './types';
 import { Contact, Email } from './zod';
 
-export const convertEmail = (email: Email) => {
+export const convertEmail = (email: Email, env: Bindings) => {
   const personalizations: MCPersonalization[] = [];
 
   // Convert 'to' field
   const toContacts: MCContact[] = convertContacts(email.to);
-  personalizations.push({ to: toContacts });
+  personalizations.push({
+    to: toContacts,
+    dkim_domain: 'akashrajpurohit.com',
+    dkim_selector: "mailchannels",
+    dkim_private_key: env.DKIM_PRIVATE_KEY
+  });
 
   let replyTo: MCContact | undefined = undefined;
   let bccContacts: MCContact[] | undefined = undefined;

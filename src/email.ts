@@ -1,8 +1,9 @@
 import { convertEmail } from './utils';
 import { Email } from './zod';
+import { Bindings } from './types';
 
-export const sendEmail = async (email: Email) => {
-  const mcEmail = convertEmail(email);
+export const sendEmail = async (email: Email, env: Bindings) => {
+  const mcEmail = convertEmail(email, env);
 
   // send email through MailChannels
   const resp = await fetch('https://api.mailchannels.net/tx/v1/send', {

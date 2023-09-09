@@ -1,5 +1,6 @@
 export type Bindings = {
   TOKEN: string;
+  DKIM_PRIVATE_KEY: string;
 };
 
 export type MCContact = { email: string; name: string | undefined };
