@@ -12,9 +12,4 @@ export const sendEmail = async (email: Email) => {
     },
     body: JSON.stringify(mcEmail),
   });
-
-  // check if email was sent successfully
-  if (resp.status > 299 || resp.status < 200) {
-    throw new Error(`Error sending email: ${resp.status} ${resp.statusText}`);
-  }
 };

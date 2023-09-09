@@ -26,6 +26,7 @@ app.post('/send', authMiddleware(), async (c) => {
   try {
     await sendEmail(email);
   } catch (err) {
+    console.log(err);
     return c.json({ success: false, message: err.message }, 400);
   }
 
