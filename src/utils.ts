@@ -6,12 +6,18 @@ export const convertEmail = (email: Email, env: Bindings) => {
 
   // Convert 'to' field
   const toContacts: MCContact[] = convertContacts(email.to);
-  personalizations.push({
+  const obj = {
     to: toContacts,
-    dkim_domain: 'akashrajpurohit.com',
-    dkim_selector: "mailchannels",
-    dkim_private_key: env.DKIM_PRIVATE_KEY
-  });
+  }
+
+  // If DKIM config is added, set the additional keys required for mailchannels
+  if (env.DKIM_PRIVATE_KEY && env.DKIM_DOMAIN) {
+    obj.dkim_domain = env.DKIM_DOMAIN;
+    obj.dkim_selector = 'mailchannels';
+    obj.dkim_private_key = env.DKIM_PRIVATE_KEY
+  }
+
+  personalizations.push(obj);
 
   let replyTo: MCContact | undefined = undefined;
   let bccContacts: MCContact[] | undefined = undefined;

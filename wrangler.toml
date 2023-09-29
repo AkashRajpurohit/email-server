@@ -2,9 +2,8 @@ name = "email-server"
 main = "src/index.ts"
 compatibility_date = "2022-11-12"
 
-[placement]
-mode = "smart"
-
 [vars]
 # The necessary secrets are:
-# - TOKEN
+# - TOKEN = ""
+# - DKIM_PRIVATE_KEY = ""
+DKIM_DOMAIN = "akashrajpurohit.com"
