@@ -71,6 +71,27 @@ For example if your current SPF record is added for zoho like this `v=spf1 inclu
 
 So the new record value will be like this `v=spf1 include:zoho.in include:relay.mailchannels.net ~all`
 
+## Domain Lockdown 🙅🏻‍♂️
+
+Mailchannels imposes [domain lockdown](https://support.mailchannels.com/hc/en-us/articles/16918954360845-Secure-your-domain-name-against-spoofing-with-Domain-Lockdown) to avoid domain spoofing, basically this is a security check to prevent attackers from using your domain to send out emails.
+
+To validate you own the domain from which you will be sending out the emails, you need to add this `TXT` record.
+
+| Name            | Value                             |
+| --------------- | --------------------------------- |
+| _mailchannels   | v=mc1 cfid=yourdomain.workers.dev |
+
+Replace `yourdomain` with your workers subdomain which you can find on the `Workers & Pages` section of Cloudflare
+
+## Setup DKIM (Optional) 🏃🏻
+
+This step is optional, but highly recommended. DKIM is a DNS record that helps prevent email spoofing. You may follow the steps listed in the [MailChannels documentation](https://support.mailchannels.com/hc/en-us/articles/7122849237389-Adding-a-DKIM-Signature) under subsection of `Creating a DKIM private and public key` and `Creating the public DNS records` to set up DKIM for your domain.
+
+If you are setting up DKIM, then make sure you add these two additional environment variables for your worker.
+
+1. `DKIM_DOMAIN` - This would be your email domain.
+2. `DKIM_PRIVATE_KEY` - This would be the private key that you generated based on the documentation of MailChannels.
+
 # Usage 🚀
 
 Once you have deployed this worker function to Cloudflare Workers, you can send emails by making a `POST` request to the worker on the `/send` endpoint with the following parameters:
