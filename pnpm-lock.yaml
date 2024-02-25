@@ -1,9 +1,13 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   hono:
-    specifier: ^3.2.5
-    version: 3.2.5
+    specifier: ^4.0.0
+    version: 4.0.0
   zod:
     specifier: ^3.21.4
     version: 3.21.4
@@ -594,8 +598,8 @@ packages:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
     dev: true
 
-  /hono@3.2.5:
-    resolution: {integrity: sha512-saAKnPNGXO3vLq198IJO6ZwunQyXOYj6FkAZS08pBNKXn34lF9b7vb/pdyTrQWv3WvUPFjGCQfDyUjMhcubAMw==}
+  /hono@4.0.0:
+    resolution: {integrity: sha512-8dKhuBBpRZEodUttQhrSFJ6PQqHRjXHyeeegfxOf132pvgbf0tOb9qqb7q7eYwAWpOcYrsUOsWdJ0sQIIovhZg==}
     engines: {node: '>=16.0.0'}
     dev: false
 

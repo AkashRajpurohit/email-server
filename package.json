@@ -10,7 +10,7 @@
     "lint:fix": "rome check ./src --apply"
   },
   "dependencies": {
-    "hono": "^3.2.5",
+    "hono": "^4.0.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
