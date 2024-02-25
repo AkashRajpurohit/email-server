@@ -12,30 +12,30 @@ app.use('*', cors());
 
 // Routes
 app.get('/', (c) => {
-  return c.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ', 302);
+	return c.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ', 302);
 });
 
 app.post('/send', authMiddleware(), async (c) => {
-  const email = await c.req.json();
-  const result = emailSchema.safeParse(email);
+	const email = await c.req.json();
+	const result = emailSchema.safeParse(email);
 
-  if (!result.success) {
-    return c.json({ success: false, issues: result.error.flatten() }, 400);
-  }
+	if (!result.success) {
+		return c.json({ success: false, issues: result.error.flatten() }, 400);
+	}
 
-  try {
-    const response = await sendEmail(email, c.env);
-    return c.json(response, response?.status || 200);
-  } catch (err) {
-    return c.json({ success: false, message: err.message }, 400);
-  }
+	try {
+		const response = await sendEmail(email, c.env);
+		return c.json(response, response?.status || 200);
+	} catch (err) {
+		return c.json({ success: false, message: err.message }, 400);
+	}
 });
 
 app.notFound((c) => c.json({ ok: false, message: 'Not Found' }, 404));
 
 app.onError((err, c) => {
-  console.error(err);
-  return c.json({ success: false, message: err.message }, 500);
+	console.error(err);
+	return c.json({ success: false, message: err.message }, 500);
 });
 
 export default app;
