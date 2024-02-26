@@ -11,11 +11,19 @@
     <samp>A free email proxy server powered by Mailchannels and Cloudflare Workers</samp>
     <br />
     <br />
-    <a href="https://blog.cloudflare.com/sending-email-from-workers-with-mailchannels/">Why free?</a>
-    ·
-    <a href="https://github.com/AkashRajpurohit/email-server/issues/new?template=bug_report.md">Bug report</a>
-    ·
-    <a href="https://github.com/AkashRajpurohit/email-server/issues/new?template=feature_request.md">Feature request</a>
+	<p align="center">
+	  <img alt="Visitors count" src="https://visitor-badge.laobi.icu/badge?page_id=@akashrajpurohit~email-server.visitor-badge&style=flat-square&color=0088cc">
+	  <a href="https://twitter.com/akashwhocodes">
+	    <img alt="follow on twitter" src="https://img.shields.io/twitter/follow/akashwhocodes.svg?style=social&label=@akashwhocodes">
+	  </a>
+	</p>
+    <p align="center">
+		<a href="https://blog.cloudflare.com/sending-email-from-workers-with-mailchannels/">Why free?</a>
+		·
+		<a href="https://github.com/AkashRajpurohit/email-server/issues/new?template=bug_report.md">Bug report</a>
+		·
+		<a href="https://github.com/AkashRajpurohit/email-server/issues/new?template=feature_request.md">Feature request</a>
+    </p>
   </p>
 </p>
 
