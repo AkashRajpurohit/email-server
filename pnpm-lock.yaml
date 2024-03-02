@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   axios:
     specifier: ^1.6.7
@@ -17,7 +21,7 @@ devDependencies:
     version: 1.5.3
   '@cloudflare/workers-types':
     specifier: ^4.20230518.0
-    version: 4.20230518.0
+    version: 4.20240222.0
   '@types/jest':
     specifier: ^29.5.12
     version: 29.5.12
@@ -533,8 +537,8 @@ packages:
     dev: true
     optional: true
 
-  /@cloudflare/workers-types@4.20230518.0:
-    resolution: {integrity: sha512-A0w1V+5SUawGaaPRlhFhSC/SCDT9oQG8TMoWOKFLA4qbqagELqEAFD4KySBIkeVOvCBLT1DZSYBMCxbXddl0kw==}
+  /@cloudflare/workers-types@4.20240222.0:
+    resolution: {integrity: sha512-luO0BdK3rLlCv3B240+cTrfqm+XSbHtpk+88aJtGwzyVK9QF/Xz8lBgE/oZZLN8nCTmOvxAZnszyxUuZ8GP8Cg==}
     dev: true
 
   /@cnakazawa/watch@1.0.4:
@@ -1360,7 +1364,7 @@ packages:
     resolution: {integrity: sha512-97y/95EzDC86jM2bKYacKk4n59miFC+WXueRdW5TeVzBw2UTL2Alvy36AZuyMUgBqxZdJSv88/q0jHTw7LvyMA==}
     engines: {node: '>=16.13'}
     dependencies:
-      '@cloudflare/workers-types': 4.20230518.0
+      '@cloudflare/workers-types': 4.20240222.0
       '@miniflare/cache': 2.14.2
       '@miniflare/core': 2.14.2
       '@miniflare/d1': 2.14.2
@@ -4800,7 +4804,3 @@ packages:
 
   /zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
