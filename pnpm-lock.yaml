@@ -1,12 +1,16 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   axios:
     specifier: ^1.6.7
     version: 1.6.7
   hono:
     specifier: ^4.0.0
-    version: 4.0.0
+    version: 4.0.8
   zod:
     specifier: ^3.21.4
     version: 3.21.4
@@ -2697,8 +2701,8 @@ packages:
       function-bind: 1.1.2
     dev: true
 
-  /hono@4.0.0:
-    resolution: {integrity: sha512-8dKhuBBpRZEodUttQhrSFJ6PQqHRjXHyeeegfxOf132pvgbf0tOb9qqb7q7eYwAWpOcYrsUOsWdJ0sQIIovhZg==}
+  /hono@4.0.8:
+    resolution: {integrity: sha512-zhTXu32vXeEXajsqZVjPfoyO0/fgAKLLmPBpSDzRBMr7zZ5N8yV1FmsfWl2MYtm+MD8hD7knLCovx8Oaqubd4w==}
     engines: {node: '>=16.0.0'}
     dev: false
 
@@ -4800,7 +4804,3 @@ packages:
 
   /zod@3.21.4:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
