@@ -81,7 +81,7 @@ describe('POST /send', () => {
 		});
 	});
 
-	it('should return failed response if email is not sent', async () => {
+	it('should return failed response if email is not sent via mailchannels', async () => {
 		const mcMock = new MockAdapter(axios);
 		mcMock.onPost('https://api.mailchannels.net/tx/v1/send').reply(400, {
 			message: 'Invalid email',
@@ -112,7 +112,7 @@ describe('POST /send', () => {
 		});
 	});
 
-	it('should return failed response if email is not sent', async () => {
+	it('should return success response if email is sent via mailchannels', async () => {
 		const mcMock = new MockAdapter(axios);
 		mcMock.onPost('https://api.mailchannels.net/tx/v1/send').reply(202, {
 			message: 'Accepted',
