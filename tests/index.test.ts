@@ -79,6 +79,7 @@ describe('POST /send', () => {
 		});
 	});
 
+	// TODO: figure out how to nock the calls to mailchannels
 	it.skip('should return failed response if email is not sent via mailchannels', async () => {
 		const res = await app.request(
 			'http://localhost/send',
@@ -105,6 +106,7 @@ describe('POST /send', () => {
 		});
 	});
 
+	// TODO: figure out how to nock the calls to mailchannels
 	it.skip('should return success response if email is sent via mailchannels', async () => {
 		const res = await app.request(
 			'http://localhost/send',
