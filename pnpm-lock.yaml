@@ -10,7 +10,7 @@ dependencies:
     version: 4.0.8
   zod:
     specifier: ^3.21.4
-    version: 3.22.3
+    version: 3.22.4
 
 devDependencies:
   '@biomejs/biome':
@@ -3527,7 +3527,7 @@ packages:
       workerd: 1.20240223.1
       ws: 8.16.0
       youch: 3.3.3
-      zod: 3.22.3
+      zod: 3.22.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -4538,5 +4538,5 @@ packages:
       stacktracey: 2.1.8
     dev: true
 
-  /zod@3.22.3:
-    resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
