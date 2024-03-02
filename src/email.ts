@@ -1,3 +1,4 @@
+import type { StatusCode } from 'hono/utils/http-status';
 import { convertEmail } from './utils';
 import { Email } from './zod';
 import { Bindings } from './types';
@@ -18,7 +19,7 @@ export const sendEmail = async (email: Email, env: Bindings) => {
 
 	return {
 		success: resp.status < 299 || resp.status >= 200,
-		status: resp.status,
+		status: resp.status as StatusCode,
 		message: resp.statusText,
 		body: respJson,
 	};
