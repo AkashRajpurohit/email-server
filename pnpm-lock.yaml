@@ -7,7 +7,7 @@ settings:
 dependencies:
   hono:
     specifier: ^4.0.0
-    version: 4.0.8
+    version: 4.0.9
   zod:
     specifier: ^3.21.4
     version: 3.22.4
@@ -2591,8 +2591,8 @@ packages:
       function-bind: 1.1.2
     dev: true
 
-  /hono@4.0.8:
-    resolution: {integrity: sha512-zhTXu32vXeEXajsqZVjPfoyO0/fgAKLLmPBpSDzRBMr7zZ5N8yV1FmsfWl2MYtm+MD8hD7knLCovx8Oaqubd4w==}
+  /hono@4.0.9:
+    resolution: {integrity: sha512-XkFx6y6jAl08bGmoy53oGtHl8eHUixvmBulfcghrSySoJD3cW4UfFUa7JDGLOsIeJUv/a9d2pBFQUX7rzRnjvA==}
     engines: {node: '>=16.0.0'}
     dev: false
 
