@@ -6,4 +6,4 @@ compatibility_date = "2022-11-12"
 # The necessary secrets are:
 # - TOKEN = ""
 # - DKIM_PRIVATE_KEY = ""
-DKIM_DOMAIN = "mail.akashrajpurohit.com"
+DKIM_DOMAIN = "akashrajpurohit.com"
