@@ -31,6 +31,9 @@
 
 > Self host your free email proxy server powered by [MailChannels](https://blog.mailchannels.com/mailchannels-enables-free-email-sending-for-cloudflare-workers-customers) and Cloudflare Workers.
 
+> [!WARNING]\
+> Mailchannels have dropped their support for Free emails from Cloudflare workers, so this no longer works. The code will still be up but now you need a paid account on Mailchannels in order to send out emails. Read more about this on [their blog](https://support.mailchannels.com/hc/en-us/articles/26814255454093-End-of-Life-Notice-Cloudflare-Workers)
+
 # Self Hosting Guide 📖
 
 Self hosting this is pretty straight forward, there are two ways.
